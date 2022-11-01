@@ -1,0 +1,30 @@
+name: Extract from Docker
+
+on: push
+
+jobs:
+  smoketest:
+    runs-on: ubuntu-22.04
+
+    strategy:
+      matrix:
+        version:
+          - v25.0.0
+          - v24.0.6
+        arch:
+          - linux/386
+          - linux/amd64
+
+    steps:
+      - name: Install Docker
+        run: |
+          curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+          sudo apt-get update
+          sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+      - name: Fetch repo
+        uses: actions/checkout@v3
+
+      - name: Run
+        run: docker build --platform=${{ matrix.arch }} --build-arg NEXTCLOUD_VERSION=${{ matrix.version }}
