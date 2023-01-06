@@ -15,8 +15,8 @@ jobs:
           - v24.0.8
           - v24.0.6
         arch:
-          - linux/386
-          - linux/amd64
+          - "386"
+          - amd64
 
     steps:
       - name: Install Docker
@@ -30,4 +30,43 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run
-        run: docker build --platform=${{ matrix.arch }} --build-arg NEXTCLOUD_VERSION=${{ matrix.version }} . || true
+        run: docker build --platform=linux/${{ matrix.arch }} --build-arg NEXTCLOUD_VERSION=${{ matrix.version }} . > "${{ matrix.version }}-${{ matrix.arch }}.log" 2>&1 || true
+
+      - name: Upload log
+        uses: actions/upload-artifact@v1
+        with:
+          name: "${{ matrix.version }}-${{ matrix.arch }}.log"
+          path: "${{ matrix.version }}-${{ matrix.arch }}.log"
+
+  deploy:
+    runs-on: ubuntu-22.04
+    needs: [smoketest]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Create folder
+      run: mkdir dist
+
+    - name: Download logs
+      uses: actions/download-artifact@v3
+      with:
+        path: dist
+
+    - name: Create index.html
+      run: |
+        echo "<html><body>" > index.html
+        echo "<h1>$(date)</h1><ul>" >> index.html
+        for i in $(ls dist)
+        do
+          echo "<li><a href=${i}/${i}>$i</a></li>" >> index.html
+        done
+        echo "</ul></body></html>" >> index.html
+        mv index.html dist
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@v4.4.1
+      with:
+        branch: gh-pages
+        folder: dist
