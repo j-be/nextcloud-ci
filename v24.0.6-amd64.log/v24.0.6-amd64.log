@@ -9,14 +9,14 @@ Digest: sha256:cccd5ce5805bc1023b12823f0a26e90c4377ed7790512f8a594ac6712c60caac
 Status: Downloaded newer image for debian:stable-slim
  ---> c722f32959f0
 Step 2/7 : RUN apt-get update &&     apt-get install -y       git       libmagickcore-6.q16-6-extra       php       php-imagick       php7.4-zip       php7.4-gd       php7.4-curl       php7.4-sqlite3       php7.4-intl       phpunit
- ---> Running in c0aef49fe2b2
+ ---> Running in 98f8e910f849
 Get:1 http://deb.debian.org/debian stable InRelease [116 kB]
 Get:2 http://deb.debian.org/debian-security stable-security InRelease [48.4 kB]
 Get:3 http://deb.debian.org/debian stable-updates InRelease [44.1 kB]
 Get:4 http://deb.debian.org/debian stable/main amd64 Packages [8183 kB]
 Get:5 http://deb.debian.org/debian-security stable-security/main amd64 Packages [210 kB]
 Get:6 http://deb.debian.org/debian stable-updates/main amd64 Packages [14.6 kB]
-Fetched 8616 kB in 1s (6425 kB/s)
+Fetched 8616 kB in 1s (6119 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -335,7 +335,7 @@ Get:209 http://deb.debian.org/debian stable/main amd64 ssl-cert all 1.1.0+nmu1 [
 Get:210 http://deb.debian.org/debian stable/main amd64 xauth amd64 1:1.1-1 [40.5 kB]
 Get:211 http://deb.debian.org/debian stable/main amd64 xdg-user-dirs amd64 0.17-2 [53.8 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 82.9 MB in 1s (93.2 MB/s)
+[0mFetched 82.9 MB in 1s (99.7 MB/s)
 Selecting previously unselected package libapparmor1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6661 files and directories currently installed.)
 Preparing to unpack .../00-libapparmor1_2.13.6-10_amd64.deb ...
@@ -1443,14 +1443,14 @@ Running hooks in /etc/ca-certificates/update.d...
 done.
 Processing triggers for php7.4-cli (7.4.33-1+deb11u1) ...
 Processing triggers for libapache2-mod-php7.4 (7.4.33-1+deb11u1) ...
-Removing intermediate container c0aef49fe2b2
- ---> 5e83d1204dff
+Removing intermediate container 98f8e910f849
+ ---> 93419c04f070
 Step 3/7 : ARG NEXTCLOUD_VERSION=v25.0.0
- ---> Running in b9bd5f3ef105
-Removing intermediate container b9bd5f3ef105
- ---> cebda8e66874
+ ---> Running in b326c6a90a22
+Removing intermediate container b326c6a90a22
+ ---> 6045bb3bd4ee
 Step 4/7 : RUN git clone --depth=1 --branch=$NEXTCLOUD_VERSION https://github.com/nextcloud/server.git
- ---> Running in a80208c5cea4
+ ---> Running in ea04848d4bec
 [91mCloning into 'server'...
 [0m[91mNote: switching to '3aabb381b9e7ffc5b13f951b8fb89494fe903a2c'.
 
@@ -1469,22 +1469,22 @@ Or undo this operation with:
 
 Turn off this advice by setting config variable advice.detachedHead to false
 
-[0m[91mUpdating files:  96% (9596/9906)[0m[91mUpdating files:  97% (9609/9906)[0m[91mUpdating files:  98% (9708/9906)[0m[91mUpdating files:  99% (9807/9906)[0m[91mUpdating files: 100% (9906/9906)Updating files: 100% (9906/9906), done.
-[0mRemoving intermediate container a80208c5cea4
- ---> d8e256eccb5b
+[0m[91mUpdating files:  92% (9179/9906)[0m[91mUpdating files:  93% (9213/9906)[0m[91mUpdating files:  94% (9312/9906)[0m[91mUpdating files:  95% (9411/9906)[0m[91mUpdating files:  96% (9510/9906)[0m[91mUpdating files:  97% (9609/9906)[0m[91mUpdating files:  98% (9708/9906)[0m[91mUpdating files:  99% (9807/9906)[0m[91mUpdating files: 100% (9906/9906)[0m[91mUpdating files: 100% (9906/9906), done.
+[0mRemoving intermediate container ea04848d4bec
+ ---> ac617f8c2801
 Step 5/7 : WORKDIR server
- ---> Running in 792e41a05d10
-Removing intermediate container 792e41a05d10
- ---> c8179206acf3
+ ---> Running in fcc3b8ba2132
+Removing intermediate container fcc3b8ba2132
+ ---> fc8327438ff9
 Step 6/7 : RUN git submodule update --init
- ---> Running in 78847afba696
+ ---> Running in fb7c1106880a
 [91mSubmodule '3rdparty' (https://github.com/nextcloud/3rdparty.git) registered for path '3rdparty'
 [0m[91mCloning into '/server/3rdparty'...
 [0mSubmodule path '3rdparty': checked out '96efba0e1d6918a8c06915b634858a426d07a84f'
-Removing intermediate container 78847afba696
- ---> 0c7325ec8bed
+Removing intermediate container fb7c1106880a
+ ---> ea3d3b73432f
 Step 7/7 : RUN ./autotest.sh sqlite
- ---> Running in c08f276c18e9
+ ---> Running in 9d210b7b278f
 Using PHP executable /usr/bin/php
 Using database oc_autotest
 Setup environment for sqlite testing on local storage ...
@@ -1748,7 +1748,7 @@ WW.WWW.W................................................... 11033 / 14503 ( 76%)
 ........................................................... 14455 / 14503 ( 99%)
 ................................................            14503 / 14503 (100%)
 
-Time: 02:22.224, Memory: 453.27 MB
+Time: 02:20.196, Memory: 453.27 MB
 
 There were 10 errors:
 
@@ -3287,7 +3287,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/NfXZgR5D22etfKK'
+-'http://localhost/index.php/s/eF8eq9BZGcw7m8Z'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:222
@@ -3297,7 +3297,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/j6Jpdb5Xt6o7Cbt'
+-'http://localhost/index.php/s/ZGm6nKJQTqs7LRc'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:250
@@ -3307,7 +3307,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/rCgNdJCDieQcg4W'
+-'http://localhost/index.php/s/ZWaxkABbqgAaHgK'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:437
@@ -3317,7 +3317,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/cDZcx8oGQzAKANr'
+-'http://localhost/index.php/s/xnRkLpW9agXC4ny'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:1315
@@ -3327,7 +3327,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/k2EsXYi5Mc9FCJB'
+-'http://localhost/index.php/s/k8brAaPk5iYRjKS'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:1344
@@ -3804,66 +3804,66 @@ Test skipped because of an error in hook method
 100) Test\Memcache\RedisTest::testClear
 Test skipped because of an error in hook method
 
-101) Test\Preview\BitmapTest::testGetThumbnail with data set #0 (-22, -71)
+101) Test\Preview\BitmapTest::testGetThumbnail with data set #0 (-50, -59)
 An error occured while operating with Imagick.
 
 /server/tests/lib/Preview/Provider.php:145
 /server/tests/lib/Preview/Provider.php:105
 
-102) Test\Preview\BitmapTest::testGetThumbnail with data set #1 (21, 48)
+102) Test\Preview\BitmapTest::testGetThumbnail with data set #1 (10, 98)
 An error occured while operating with Imagick.
 
 /server/tests/lib/Preview/Provider.php:145
 /server/tests/lib/Preview/Provider.php:105
 
-103) Test\Preview\BitmapTest::testGetThumbnail with data set #2 (-40, 43)
+103) Test\Preview\BitmapTest::testGetThumbnail with data set #2 (-44, 24)
 An error occured while operating with Imagick.
 
 /server/tests/lib/Preview/Provider.php:145
 /server/tests/lib/Preview/Provider.php:105
 
-104) Test\Preview\BitmapTest::testGetThumbnail with data set #3 (21, -17)
+104) Test\Preview\BitmapTest::testGetThumbnail with data set #3 (64, -42)
 An error occured while operating with Imagick.
 
 /server/tests/lib/Preview/Provider.php:145
 /server/tests/lib/Preview/Provider.php:105
 
-105) Test\Preview\MovieTest::testGetThumbnail with data set #0 (-43, -40)
+105) Test\Preview\MovieTest::testGetThumbnail with data set #0 (-37, -91)
 No Movie provider present
 
 /server/tests/lib/Preview/MovieTest.php:48
 
-106) Test\Preview\MovieTest::testGetThumbnail with data set #1 (37, 53)
+106) Test\Preview\MovieTest::testGetThumbnail with data set #1 (35, 9)
 No Movie provider present
 
 /server/tests/lib/Preview/MovieTest.php:48
 
-107) Test\Preview\MovieTest::testGetThumbnail with data set #2 (-13, 46)
+107) Test\Preview\MovieTest::testGetThumbnail with data set #2 (-97, 22)
 No Movie provider present
 
 /server/tests/lib/Preview/MovieTest.php:48
 
-108) Test\Preview\MovieTest::testGetThumbnail with data set #3 (97, -56)
+108) Test\Preview\MovieTest::testGetThumbnail with data set #3 (24, -78)
 No Movie provider present
 
 /server/tests/lib/Preview/MovieTest.php:48
 
-109) Test\Preview\OfficeTest::testGetThumbnail with data set #0 (-100, -33)
+109) Test\Preview\OfficeTest::testGetThumbnail with data set #0 (-58, -36)
 No Office provider present
 
 /server/tests/lib/Preview/OfficeTest.php:45
 
-110) Test\Preview\OfficeTest::testGetThumbnail with data set #1 (49, 100)
+110) Test\Preview\OfficeTest::testGetThumbnail with data set #1 (70, 86)
 No Office provider present
 
 /server/tests/lib/Preview/OfficeTest.php:45
 
-111) Test\Preview\OfficeTest::testGetThumbnail with data set #2 (-96, 55)
+111) Test\Preview\OfficeTest::testGetThumbnail with data set #2 (-35, 100)
 No Office provider present
 
 /server/tests/lib/Preview/OfficeTest.php:45
 
-112) Test\Preview\OfficeTest::testGetThumbnail with data set #3 (87, -57)
+112) Test\Preview\OfficeTest::testGetThumbnail with data set #3 (42, -79)
 No Office provider present
 
 /server/tests/lib/Preview/OfficeTest.php:45
@@ -3908,5 +3908,5 @@ Unreliable test
 /server/apps/files_versions/tests/VersioningTest.php:690
 
 ERRORS!
-Tests: 14503, Assertions: 37432, Errors: 10, Failures: 7, Warnings: 484, Skipped: 121, Risky: 1.
+Tests: 14503, Assertions: 37431, Errors: 10, Failures: 7, Warnings: 484, Skipped: 121, Risky: 1.
 The command '/bin/sh -c ./autotest.sh sqlite' returned a non-zero code: 2

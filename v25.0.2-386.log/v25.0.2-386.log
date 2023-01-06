@@ -10,14 +10,14 @@ Status: Downloaded newer image for debian:stable-slim
  ---> 7ba1d5ada595
 Step 2/7 : RUN apt-get update &&     apt-get install -y       git       libmagickcore-6.q16-6-extra       php       php-imagick       php7.4-zip       php7.4-gd       php7.4-curl       php7.4-sqlite3       php7.4-intl       phpunit
  ---> [Warning] The requested image's platform (linux/386) does not match the detected host platform (linux/amd64) and no specific platform was requested
- ---> Running in 0b4c77a2ce4c
+ ---> Running in 8ef5c2d19a48
 Get:1 http://deb.debian.org/debian stable InRelease [116 kB]
 Get:2 http://deb.debian.org/debian-security stable-security InRelease [48.4 kB]
 Get:3 http://deb.debian.org/debian stable-updates InRelease [44.1 kB]
 Get:4 http://deb.debian.org/debian stable/main i386 Packages [8122 kB]
 Get:5 http://deb.debian.org/debian-security stable-security/main i386 Packages [209 kB]
 Get:6 http://deb.debian.org/debian stable-updates/main i386 Packages [15.1 kB]
-Fetched 8555 kB in 2s (4519 kB/s)
+Fetched 8555 kB in 2s (5344 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -336,7 +336,7 @@ Get:209 http://deb.debian.org/debian stable/main i386 ssl-cert all 1.1.0+nmu1 [2
 Get:210 http://deb.debian.org/debian stable/main i386 xauth i386 1:1.1-1 [41.2 kB]
 Get:211 http://deb.debian.org/debian stable/main i386 xdg-user-dirs i386 0.17-2 [54.5 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 84.1 MB in 1s (59.1 MB/s)
+[0mFetched 84.1 MB in 1s (78.0 MB/s)
 Selecting previously unselected package libapparmor1:i386.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6655 files and directories currently installed.)
 Preparing to unpack .../00-libapparmor1_2.13.6-10_i386.deb ...
@@ -1444,16 +1444,16 @@ Running hooks in /etc/ca-certificates/update.d...
 done.
 Processing triggers for php7.4-cli (7.4.33-1+deb11u1) ...
 Processing triggers for libapache2-mod-php7.4 (7.4.33-1+deb11u1) ...
-Removing intermediate container 0b4c77a2ce4c
- ---> 5812294ee756
+Removing intermediate container 8ef5c2d19a48
+ ---> d2a3c18abf45
 Step 3/7 : ARG NEXTCLOUD_VERSION=v25.0.0
  ---> [Warning] The requested image's platform (linux/386) does not match the detected host platform (linux/amd64) and no specific platform was requested
- ---> Running in ee22eb459ad9
-Removing intermediate container ee22eb459ad9
- ---> 2503b44b9421
+ ---> Running in 4f845bb7dbe7
+Removing intermediate container 4f845bb7dbe7
+ ---> 358f9ca77cf7
 Step 4/7 : RUN git clone --depth=1 --branch=$NEXTCLOUD_VERSION https://github.com/nextcloud/server.git
  ---> [Warning] The requested image's platform (linux/386) does not match the detected host platform (linux/amd64) and no specific platform was requested
- ---> Running in fe1f9153362b
+ ---> Running in cdd2aa8b3595
 [91mCloning into 'server'...
 [0m[91mNote: switching to '9c791972de9c2561a9b36c1a60e48c25315ecca5'.
 
@@ -1472,25 +1472,25 @@ Or undo this operation with:
 
 Turn off this advice by setting config variable advice.detachedHead to false
 
-[0m[91mUpdating files:  72% (7177/9924)[0m[91mUpdating files:  73% (7245/9924)[0m[91mUpdating files:  74% (7344/9924)[0m[91mUpdating files:  75% (7443/9924)[0m[91mUpdating files:  76% (7543/9924)[0m[91mUpdating files:  77% (7642/9924)[0m[91mUpdating files:  78% (7741/9924)[0m[91mUpdating files:  79% (7840/9924)[0m[91mUpdating files:  80% (7940/9924)[0m[91mUpdating files:  81% (8039/9924)[0m[91mUpdating files:  82% (8138/9924)[0m[91mUpdating files:  83% (8237/9924)[0m[91mUpdating files:  84% (8337/9924)[0m[91mUpdating files:  85% (8436/9924)[0m[91mUpdating files:  86% (8535/9924)[0m[91mUpdating files:  87% (8634/9924)[0m[91mUpdating files:  88% (8734/9924)[0m[91mUpdating files:  89% (8833/9924)[0m[91mUpdating files:  90% (8932/9924)[0m[91mUpdating files:  91% (9031/9924)[0m[91mUpdating files:  92% (9131/9924)[0m[91mUpdating files:  93% (9230/9924)[0m[91mUpdating files:  94% (9329/9924)[0m[91mUpdating files:  95% (9428/9924)[0m[91mUpdating files:  96% (9528/9924)[0m[91mUpdating files:  97% (9627/9924)[0m[91mUpdating files:  98% (9726/9924)[0m[91mUpdating files:  99% (9825/9924)[0m[91mUpdating files: 100% (9924/9924)Updating files: 100% (9924/9924), done.
-[0mRemoving intermediate container fe1f9153362b
- ---> 47ae5024399e
+[0m[91mUpdating files:  74% (7426/9924)[0m[91mUpdating files:  75% (7443/9924)[0m[91mUpdating files:  76% (7543/9924)[0m[91mUpdating files:  77% (7642/9924)[0m[91mUpdating files:  78% (7741/9924)[0m[91mUpdating files:  79% (7840/9924)[0m[91mUpdating files:  80% (7940/9924)[0m[91mUpdating files:  81% (8039/9924)[0m[91mUpdating files:  82% (8138/9924)[0m[91mUpdating files:  83% (8237/9924)[0m[91mUpdating files:  84% (8337/9924)[0m[91mUpdating files:  85% (8436/9924)[0m[91mUpdating files:  86% (8535/9924)[0m[91mUpdating files:  87% (8634/9924)[0m[91mUpdating files:  88% (8734/9924)[0m[91mUpdating files:  89% (8833/9924)[0m[91mUpdating files:  90% (8932/9924)[0m[91mUpdating files:  91% (9031/9924)[0m[91mUpdating files:  92% (9131/9924)[0m[91mUpdating files:  93% (9230/9924)[0m[91mUpdating files:  94% (9329/9924)[0m[91mUpdating files:  95% (9428/9924)[0m[91mUpdating files:  96% (9528/9924)[0m[91mUpdating files:  97% (9627/9924)[0m[91mUpdating files:  98% (9726/9924)[0m[91mUpdating files:  99% (9825/9924)[0m[91mUpdating files: 100% (9924/9924)Updating files: 100% (9924/9924), done.
+[0mRemoving intermediate container cdd2aa8b3595
+ ---> 64144ff1c669
 Step 5/7 : WORKDIR server
  ---> [Warning] The requested image's platform (linux/386) does not match the detected host platform (linux/amd64) and no specific platform was requested
- ---> Running in 8f3042cf926b
-Removing intermediate container 8f3042cf926b
- ---> c159609cd580
+ ---> Running in 1f19e4e92363
+Removing intermediate container 1f19e4e92363
+ ---> f5acdab3624a
 Step 6/7 : RUN git submodule update --init
  ---> [Warning] The requested image's platform (linux/386) does not match the detected host platform (linux/amd64) and no specific platform was requested
- ---> Running in 23ac430af28b
+ ---> Running in c7254524a9bd
 [91mSubmodule '3rdparty' (https://github.com/nextcloud/3rdparty.git) registered for path '3rdparty'
 [0m[91mCloning into '/server/3rdparty'...
 [0mSubmodule path '3rdparty': checked out '72a171171cd22bf7287567c75db6dca31bd236d6'
-Removing intermediate container 23ac430af28b
- ---> d9c1de26978b
+Removing intermediate container c7254524a9bd
+ ---> c06ac1aebee7
 Step 7/7 : RUN ./autotest.sh sqlite
  ---> [Warning] The requested image's platform (linux/386) does not match the detected host platform (linux/amd64) and no specific platform was requested
- ---> Running in 1b701f2cd82c
+ ---> Running in 29968914d75c
 Using PHP executable /usr/bin/php
 Using database oc_autotest
 Setup environment for sqlite testing on local storage ...
@@ -1755,7 +1755,7 @@ EE......................................................... 13393 / 14641 ( 91%)
 ........................................................... 14632 / 14641 ( 99%)
 .........                                                   14641 / 14641 (100%)
 
-Time: 08:12.322, Memory: 364.01 MB
+Time: 06:36.410, Memory: 364.01 MB
 
 There were 27 errors:
 
@@ -1800,78 +1800,78 @@ TypeError: Argument 2 passed to Test\MemoryInfoTest::testMemoryLimit() must be o
 /server/tests/lib/MemoryInfoTest.php:77
 
 9) OCA\DAV\Tests\unit\BackgroundJob\CleanupInvitationTokenJobTest::testRun
-PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method lt may not return value of type Mock_IQueryFunction_8af6a404, its return declaration is "string"
+PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method lt may not return value of type Mock_IQueryFunction_1b54e06c, its return declaration is "string"
 
 /server/apps/dav/tests/unit/BackgroundJob/CleanupInvitationTokenJobTest.php:85
 
 10) OCA\DAV\Tests\Unit\DAV\Controller\InvitationResponseControllerTest::testAccept with data set "local attendee" (false)
-PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_8af6a404, its return declaration is "string"
+PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_1b54e06c, its return declaration is "string"
 
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:485
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:102
 
 11) OCA\DAV\Tests\Unit\DAV\Controller\InvitationResponseControllerTest::testAccept with data set "external attendee" (true)
-PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_8af6a404, its return declaration is "string"
+PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_1b54e06c, its return declaration is "string"
 
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:485
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:102
 
 12) OCA\DAV\Tests\Unit\DAV\Controller\InvitationResponseControllerTest::testAcceptSequence with data set "local attendee" (false)
-PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_8af6a404, its return declaration is "string"
+PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_1b54e06c, its return declaration is "string"
 
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:485
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:166
 
 13) OCA\DAV\Tests\Unit\DAV\Controller\InvitationResponseControllerTest::testAcceptSequence with data set "external attendee" (true)
-PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_8af6a404, its return declaration is "string"
+PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_1b54e06c, its return declaration is "string"
 
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:485
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:166
 
 14) OCA\DAV\Tests\Unit\DAV\Controller\InvitationResponseControllerTest::testAcceptRecurrenceId with data set "local attendee" (false)
-PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_8af6a404, its return declaration is "string"
+PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_1b54e06c, its return declaration is "string"
 
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:485
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:230
 
 15) OCA\DAV\Tests\Unit\DAV\Controller\InvitationResponseControllerTest::testAcceptRecurrenceId with data set "external attendee" (true)
-PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_8af6a404, its return declaration is "string"
+PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_1b54e06c, its return declaration is "string"
 
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:485
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:230
 
 16) OCA\DAV\Tests\Unit\DAV\Controller\InvitationResponseControllerTest::testAcceptTokenNotFound
-PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_8af6a404, its return declaration is "string"
+PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_1b54e06c, its return declaration is "string"
 
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:485
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:283
 
 17) OCA\DAV\Tests\Unit\DAV\Controller\InvitationResponseControllerTest::testAcceptExpiredToken
-PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_8af6a404, its return declaration is "string"
+PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_1b54e06c, its return declaration is "string"
 
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:485
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:301
 
 18) OCA\DAV\Tests\Unit\DAV\Controller\InvitationResponseControllerTest::testDecline with data set "local attendee" (false)
-PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_8af6a404, its return declaration is "string"
+PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_1b54e06c, its return declaration is "string"
 
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:485
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:322
 
 19) OCA\DAV\Tests\Unit\DAV\Controller\InvitationResponseControllerTest::testDecline with data set "external attendee" (true)
-PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_8af6a404, its return declaration is "string"
+PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_1b54e06c, its return declaration is "string"
 
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:485
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:322
 
 20) OCA\DAV\Tests\Unit\DAV\Controller\InvitationResponseControllerTest::testProcessMoreOptionsResult with data set "local attendee" (false)
-PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_8af6a404, its return declaration is "string"
+PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_1b54e06c, its return declaration is "string"
 
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:485
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:406
 
 21) OCA\DAV\Tests\Unit\DAV\Controller\InvitationResponseControllerTest::testProcessMoreOptionsResult with data set "external attendee" (true)
-PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_8af6a404, its return declaration is "string"
+PHPUnit\Framework\MockObject\IncompatibleReturnValueException: Method eq may not return value of type Mock_IQueryFunction_1b54e06c, its return declaration is "string"
 
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:485
 /server/apps/dav/tests/unit/Controller/InvitationResponseControllerTest.php:406
@@ -2439,25 +2439,25 @@ The at() matcher has been deprecated. It will be removed in PHPUnit 10. Please r
 
 There were 16 failures:
 
-1) Test\Preview\MP3Test::testGetThumbnail with data set #0 (-89, -89)
+1) Test\Preview\MP3Test::testGetThumbnail with data set #0 (-63, -62)
 Failed asserting that null is not equal to false.
 
 /server/tests/lib/Preview/Provider.php:148
 /server/tests/lib/Preview/Provider.php:105
 
-2) Test\Preview\MP3Test::testGetThumbnail with data set #1 (98, 60)
+2) Test\Preview\MP3Test::testGetThumbnail with data set #1 (67, 50)
 Failed asserting that null is not equal to false.
 
 /server/tests/lib/Preview/Provider.php:148
 /server/tests/lib/Preview/Provider.php:105
 
-3) Test\Preview\MP3Test::testGetThumbnail with data set #2 (-56, 35)
+3) Test\Preview\MP3Test::testGetThumbnail with data set #2 (-27, 53)
 Failed asserting that null is not equal to false.
 
 /server/tests/lib/Preview/Provider.php:148
 /server/tests/lib/Preview/Provider.php:105
 
-4) Test\Preview\MP3Test::testGetThumbnail with data set #3 (10, -70)
+4) Test\Preview\MP3Test::testGetThumbnail with data set #3 (89, -56)
 Failed asserting that null is not equal to false.
 
 /server/tests/lib/Preview/Provider.php:148
@@ -2542,8 +2542,8 @@ Failed asserting that two arrays are equal.
 +++ Actual
 @@ @@
  Array (
-     0 => 'eventb3M7g2gUkt0U1'
-+    1 => 'eventm8B8ryHox8hG3'
+     0 => 'eventlPkiNY6saA3iE'
++    1 => 'eventvXA1jsQpprBQC'
  )
 
 /server/apps/dav/tests/unit/CalDAV/CalDavBackendTest.php:437
@@ -2554,7 +2554,7 @@ Failed asserting that two arrays are equal.
 +++ Actual
 @@ @@
  Array (
--    0 => 'event490fTqmVs6xKa'
+-    0 => 'eventLcfANYvgbJxs6'
  )
 
 /server/apps/dav/tests/unit/CalDAV/CalDavBackendTest.php:437
@@ -2564,7 +2564,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/PNfpSToSstexLo3'
+-'http://localhost/index.php/s/7TCiZgGfsPpPfj6'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:222
@@ -2574,7 +2574,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/LweJCq6y8TpwqXd'
+-'http://localhost/index.php/s/QfJLQKoPiAH3aL9'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:250
@@ -2584,7 +2584,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/9jXS9BeWtWMdaLy'
+-'http://localhost/index.php/s/XRH2N8yegBEXs9R'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:437
@@ -2594,7 +2594,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/q55KBRTyN9mmTnz'
+-'http://localhost/index.php/s/9DCNKXNytKWQrNZ'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:1315
@@ -2604,7 +2604,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/GMsYKdWcK5kPeEQ'
+-'http://localhost/index.php/s/qybGPBW2wLGBxAq'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:1344
@@ -3094,66 +3094,66 @@ Test skipped because of an error in hook method
 104) Test\Memcache\RedisTest::testClear
 Test skipped because of an error in hook method
 
-105) Test\Preview\BitmapTest::testGetThumbnail with data set #0 (-91, -23)
+105) Test\Preview\BitmapTest::testGetThumbnail with data set #0 (-9, -82)
 An error occured while operating with Imagick.
 
 /server/tests/lib/Preview/Provider.php:145
 /server/tests/lib/Preview/Provider.php:105
 
-106) Test\Preview\BitmapTest::testGetThumbnail with data set #1 (87, 63)
+106) Test\Preview\BitmapTest::testGetThumbnail with data set #1 (67, 93)
 An error occured while operating with Imagick.
 
 /server/tests/lib/Preview/Provider.php:145
 /server/tests/lib/Preview/Provider.php:105
 
-107) Test\Preview\BitmapTest::testGetThumbnail with data set #2 (-25, 18)
+107) Test\Preview\BitmapTest::testGetThumbnail with data set #2 (-50, 78)
 An error occured while operating with Imagick.
 
 /server/tests/lib/Preview/Provider.php:145
 /server/tests/lib/Preview/Provider.php:105
 
-108) Test\Preview\BitmapTest::testGetThumbnail with data set #3 (16, -60)
+108) Test\Preview\BitmapTest::testGetThumbnail with data set #3 (5, -36)
 An error occured while operating with Imagick.
 
 /server/tests/lib/Preview/Provider.php:145
 /server/tests/lib/Preview/Provider.php:105
 
-109) Test\Preview\MovieTest::testGetThumbnail with data set #0 (-98, -49)
+109) Test\Preview\MovieTest::testGetThumbnail with data set #0 (-52, -64)
 No Movie provider present
 
 /server/tests/lib/Preview/MovieTest.php:48
 
-110) Test\Preview\MovieTest::testGetThumbnail with data set #1 (28, 7)
+110) Test\Preview\MovieTest::testGetThumbnail with data set #1 (16, 6)
 No Movie provider present
 
 /server/tests/lib/Preview/MovieTest.php:48
 
-111) Test\Preview\MovieTest::testGetThumbnail with data set #2 (-91, 70)
+111) Test\Preview\MovieTest::testGetThumbnail with data set #2 (-42, 25)
 No Movie provider present
 
 /server/tests/lib/Preview/MovieTest.php:48
 
-112) Test\Preview\MovieTest::testGetThumbnail with data set #3 (85, -13)
+112) Test\Preview\MovieTest::testGetThumbnail with data set #3 (64, -85)
 No Movie provider present
 
 /server/tests/lib/Preview/MovieTest.php:48
 
-113) Test\Preview\OfficeTest::testGetThumbnail with data set #0 (-54, -32)
+113) Test\Preview\OfficeTest::testGetThumbnail with data set #0 (-11, -99)
 No Office provider present
 
 /server/tests/lib/Preview/OfficeTest.php:45
 
-114) Test\Preview\OfficeTest::testGetThumbnail with data set #1 (89, 39)
+114) Test\Preview\OfficeTest::testGetThumbnail with data set #1 (49, 72)
 No Office provider present
 
 /server/tests/lib/Preview/OfficeTest.php:45
 
-115) Test\Preview\OfficeTest::testGetThumbnail with data set #2 (-52, 94)
+115) Test\Preview\OfficeTest::testGetThumbnail with data set #2 (-18, 25)
 No Office provider present
 
 /server/tests/lib/Preview/OfficeTest.php:45
 
-116) Test\Preview\OfficeTest::testGetThumbnail with data set #3 (68, -97)
+116) Test\Preview\OfficeTest::testGetThumbnail with data set #3 (10, -68)
 No Office provider present
 
 /server/tests/lib/Preview/OfficeTest.php:45

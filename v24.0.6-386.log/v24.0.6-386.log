@@ -10,14 +10,14 @@ Status: Downloaded newer image for debian:stable-slim
  ---> 7ba1d5ada595
 Step 2/7 : RUN apt-get update &&     apt-get install -y       git       libmagickcore-6.q16-6-extra       php       php-imagick       php7.4-zip       php7.4-gd       php7.4-curl       php7.4-sqlite3       php7.4-intl       phpunit
  ---> [Warning] The requested image's platform (linux/386) does not match the detected host platform (linux/amd64) and no specific platform was requested
- ---> Running in b328a9cd9fba
+ ---> Running in c23ced224398
 Get:1 http://deb.debian.org/debian stable InRelease [116 kB]
 Get:2 http://deb.debian.org/debian-security stable-security InRelease [48.4 kB]
 Get:3 http://deb.debian.org/debian stable-updates InRelease [44.1 kB]
 Get:4 http://deb.debian.org/debian stable/main i386 Packages [8122 kB]
 Get:5 http://deb.debian.org/debian-security stable-security/main i386 Packages [209 kB]
 Get:6 http://deb.debian.org/debian stable-updates/main i386 Packages [15.1 kB]
-Fetched 8555 kB in 2s (4655 kB/s)
+Fetched 8555 kB in 2s (4627 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -336,7 +336,7 @@ Get:209 http://deb.debian.org/debian stable/main i386 ssl-cert all 1.1.0+nmu1 [2
 Get:210 http://deb.debian.org/debian stable/main i386 xauth i386 1:1.1-1 [41.2 kB]
 Get:211 http://deb.debian.org/debian stable/main i386 xdg-user-dirs i386 0.17-2 [54.5 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 84.1 MB in 2s (53.4 MB/s)
+[0mFetched 84.1 MB in 1s (76.7 MB/s)
 Selecting previously unselected package libapparmor1:i386.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6655 files and directories currently installed.)
 Preparing to unpack .../00-libapparmor1_2.13.6-10_i386.deb ...
@@ -1444,16 +1444,16 @@ Running hooks in /etc/ca-certificates/update.d...
 done.
 Processing triggers for php7.4-cli (7.4.33-1+deb11u1) ...
 Processing triggers for libapache2-mod-php7.4 (7.4.33-1+deb11u1) ...
-Removing intermediate container b328a9cd9fba
- ---> 94b2c25486e4
+Removing intermediate container c23ced224398
+ ---> 504c4b7aae21
 Step 3/7 : ARG NEXTCLOUD_VERSION=v25.0.0
  ---> [Warning] The requested image's platform (linux/386) does not match the detected host platform (linux/amd64) and no specific platform was requested
- ---> Running in 5612a9bb628e
-Removing intermediate container 5612a9bb628e
- ---> 976adb009dc9
+ ---> Running in 26697bfb4d64
+Removing intermediate container 26697bfb4d64
+ ---> e8598016f0be
 Step 4/7 : RUN git clone --depth=1 --branch=$NEXTCLOUD_VERSION https://github.com/nextcloud/server.git
  ---> [Warning] The requested image's platform (linux/386) does not match the detected host platform (linux/amd64) and no specific platform was requested
- ---> Running in 9cca693daf3a
+ ---> Running in 89a855886c0f
 [91mCloning into 'server'...
 [0m[91mNote: switching to '3aabb381b9e7ffc5b13f951b8fb89494fe903a2c'.
 
@@ -1472,25 +1472,25 @@ Or undo this operation with:
 
 Turn off this advice by setting config variable advice.detachedHead to false
 
-[0m[91mUpdating files:  82% (8214/9906)[0m[91mUpdating files:  83% (8222/9906)[0m[91mUpdating files:  84% (8322/9906)[0m[91mUpdating files:  85% (8421/9906)[0m[91mUpdating files:  86% (8520/9906)[0m[91mUpdating files:  87% (8619/9906)[0m[91mUpdating files:  88% (8718/9906)[0m[91mUpdating files:  89% (8817/9906)[0m[91mUpdating files:  90% (8916/9906)[0m[91mUpdating files:  91% (9015/9906)[0m[91mUpdating files:  92% (9114/9906)[0m[91mUpdating files:  93% (9213/9906)[0m[91mUpdating files:  94% (9312/9906)[0m[91mUpdating files:  95% (9411/9906)[0m[91mUpdating files:  96% (9510/9906)[0m[91mUpdating files:  97% (9609/9906)[0m[91mUpdating files:  98% (9708/9906)[0m[91mUpdating files:  99% (9807/9906)[0m[91mUpdating files: 100% (9906/9906)[0m[91mUpdating files: 100% (9906/9906), done.
-[0mRemoving intermediate container 9cca693daf3a
- ---> 6cded1d67f8c
+[0m[91mUpdating files:  81% (8060/9906)[0m[91mUpdating files:  82% (8123/9906)[0m[91mUpdating files:  83% (8222/9906)[0m[91mUpdating files:  84% (8322/9906)[0m[91mUpdating files:  85% (8421/9906)[0m[91mUpdating files:  86% (8520/9906)[0m[91mUpdating files:  87% (8619/9906)[0m[91mUpdating files:  88% (8718/9906)[0m[91mUpdating files:  89% (8817/9906)[0m[91mUpdating files:  90% (8916/9906)[0m[91mUpdating files:  91% (9015/9906)[0m[91mUpdating files:  92% (9114/9906)[0m[91mUpdating files:  93% (9213/9906)[0m[91mUpdating files:  94% (9312/9906)[0m[91mUpdating files:  95% (9411/9906)[0m[91mUpdating files:  96% (9510/9906)[0m[91mUpdating files:  97% (9609/9906)[0m[91mUpdating files:  98% (9708/9906)[0m[91mUpdating files:  99% (9807/9906)[0m[91mUpdating files: 100% (9906/9906)[0m[91mUpdating files: 100% (9906/9906), done.
+[0mRemoving intermediate container 89a855886c0f
+ ---> d78fbc083737
 Step 5/7 : WORKDIR server
  ---> [Warning] The requested image's platform (linux/386) does not match the detected host platform (linux/amd64) and no specific platform was requested
- ---> Running in 0aa6f1ac65c5
-Removing intermediate container 0aa6f1ac65c5
- ---> 41247a511fe4
+ ---> Running in 0476dcb3daed
+Removing intermediate container 0476dcb3daed
+ ---> 9188b0116ed6
 Step 6/7 : RUN git submodule update --init
  ---> [Warning] The requested image's platform (linux/386) does not match the detected host platform (linux/amd64) and no specific platform was requested
- ---> Running in 2b98f1a6bf0b
+ ---> Running in db6a6b144d6f
 [91mSubmodule '3rdparty' (https://github.com/nextcloud/3rdparty.git) registered for path '3rdparty'
 [0m[91mCloning into '/server/3rdparty'...
 [0mSubmodule path '3rdparty': checked out '96efba0e1d6918a8c06915b634858a426d07a84f'
-Removing intermediate container 2b98f1a6bf0b
- ---> aa731c632321
+Removing intermediate container db6a6b144d6f
+ ---> 869dfa07bf95
 Step 7/7 : RUN ./autotest.sh sqlite
  ---> [Warning] The requested image's platform (linux/386) does not match the detected host platform (linux/amd64) and no specific platform was requested
- ---> Running in 31df8ade5714
+ ---> Running in 7546056ee97b
 Using PHP executable /usr/bin/php
 Using database oc_autotest
 Setup environment for sqlite testing on local storage ...
@@ -1754,7 +1754,7 @@ WW.WWW.W................................................... 11033 / 14503 ( 76%)
 ........................................................... 14455 / 14503 ( 99%)
 ................................................            14503 / 14503 (100%)
 
-Time: 06:57.360, Memory: 362.27 MB
+Time: 06:44.273, Memory: 362.27 MB
 
 There were 12 errors:
 
@@ -3291,25 +3291,25 @@ Failed asserting that two strings are equal.
 
 /server/tests/lib/Avatar/GuestAvatarTest.php:70
 
-2) Test\Preview\MP3Test::testGetThumbnail with data set #0 (-35, -60)
+2) Test\Preview\MP3Test::testGetThumbnail with data set #0 (-31, -9)
 Failed asserting that null is not equal to false.
 
 /server/tests/lib/Preview/Provider.php:148
 /server/tests/lib/Preview/Provider.php:105
 
-3) Test\Preview\MP3Test::testGetThumbnail with data set #1 (95, 77)
+3) Test\Preview\MP3Test::testGetThumbnail with data set #1 (70, 69)
 Failed asserting that null is not equal to false.
 
 /server/tests/lib/Preview/Provider.php:148
 /server/tests/lib/Preview/Provider.php:105
 
-4) Test\Preview\MP3Test::testGetThumbnail with data set #2 (-80, 5)
+4) Test\Preview\MP3Test::testGetThumbnail with data set #2 (-33, 57)
 Failed asserting that null is not equal to false.
 
 /server/tests/lib/Preview/Provider.php:148
 /server/tests/lib/Preview/Provider.php:105
 
-5) Test\Preview\MP3Test::testGetThumbnail with data set #3 (30, -97)
+5) Test\Preview\MP3Test::testGetThumbnail with data set #3 (32, -20)
 Failed asserting that null is not equal to false.
 
 /server/tests/lib/Preview/Provider.php:148
@@ -3375,9 +3375,9 @@ Failed asserting that two arrays are equal.
 +++ Actual
 @@ @@
  Array (
--    0 => 'eventhhEMyGTPiwdlL'
-+    0 => 'event0HQVKFK8gktqd'
-+    1 => 'eventhhEMyGTPiwdlL'
+-    0 => 'evente60sMRGi7Pajz'
++    0 => 'eventJfDSzCQEFec8E'
++    1 => 'evente60sMRGi7Pajz'
  )
 
 /server/apps/dav/tests/unit/CalDAV/CalDavBackendTest.php:440
@@ -3388,7 +3388,7 @@ Failed asserting that two arrays are equal.
 +++ Actual
 @@ @@
  Array (
--    0 => 'eventRmHaFVu4WRmMp'
+-    0 => 'event5vEZIe0g1KPYr'
  )
 
 /server/apps/dav/tests/unit/CalDAV/CalDavBackendTest.php:440
@@ -3398,7 +3398,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/iopibxGQepHBjpy'
+-'http://localhost/index.php/s/aj2HRPY2XHJPEQ9'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:222
@@ -3408,7 +3408,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/myCBiALLn4qYyTF'
+-'http://localhost/index.php/s/td6Md8737zrZyYt'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:250
@@ -3418,7 +3418,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/CL4X5pSY9fLLqBE'
+-'http://localhost/index.php/s/7AmHPEREALLCNMj'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:437
@@ -3428,7 +3428,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/2p7CgzYfGwqSzWm'
+-'http://localhost/index.php/s/TSReMmmzYcHLNXs'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:1315
@@ -3438,7 +3438,7 @@ Failed asserting that two strings are equal.
 --- Expected
 +++ Actual
 @@ @@
--'http://localhost/index.php/s/b3EDDDao57yX4mw'
+-'http://localhost/index.php/s/EwkgpM6EwzKSmfE'
 +'http://localhost/'
 
 /server/apps/files_sharing/tests/ApiTest.php:1344
@@ -3915,66 +3915,66 @@ Test skipped because of an error in hook method
 100) Test\Memcache\RedisTest::testClear
 Test skipped because of an error in hook method
 
-101) Test\Preview\BitmapTest::testGetThumbnail with data set #0 (-38, -64)
+101) Test\Preview\BitmapTest::testGetThumbnail with data set #0 (-28, -50)
 An error occured while operating with Imagick.
 
 /server/tests/lib/Preview/Provider.php:145
 /server/tests/lib/Preview/Provider.php:105
 
-102) Test\Preview\BitmapTest::testGetThumbnail with data set #1 (9, 93)
+102) Test\Preview\BitmapTest::testGetThumbnail with data set #1 (18, 50)
 An error occured while operating with Imagick.
 
 /server/tests/lib/Preview/Provider.php:145
 /server/tests/lib/Preview/Provider.php:105
 
-103) Test\Preview\BitmapTest::testGetThumbnail with data set #2 (-42, 91)
+103) Test\Preview\BitmapTest::testGetThumbnail with data set #2 (-93, 99)
 An error occured while operating with Imagick.
 
 /server/tests/lib/Preview/Provider.php:145
 /server/tests/lib/Preview/Provider.php:105
 
-104) Test\Preview\BitmapTest::testGetThumbnail with data set #3 (29, -8)
+104) Test\Preview\BitmapTest::testGetThumbnail with data set #3 (97, -18)
 An error occured while operating with Imagick.
 
 /server/tests/lib/Preview/Provider.php:145
 /server/tests/lib/Preview/Provider.php:105
 
-105) Test\Preview\MovieTest::testGetThumbnail with data set #0 (-5, -89)
+105) Test\Preview\MovieTest::testGetThumbnail with data set #0 (-80, -24)
 No Movie provider present
 
 /server/tests/lib/Preview/MovieTest.php:48
 
-106) Test\Preview\MovieTest::testGetThumbnail with data set #1 (7, 16)
+106) Test\Preview\MovieTest::testGetThumbnail with data set #1 (58, 24)
 No Movie provider present
 
 /server/tests/lib/Preview/MovieTest.php:48
 
-107) Test\Preview\MovieTest::testGetThumbnail with data set #2 (-57, 71)
+107) Test\Preview\MovieTest::testGetThumbnail with data set #2 (-49, 11)
 No Movie provider present
 
 /server/tests/lib/Preview/MovieTest.php:48
 
-108) Test\Preview\MovieTest::testGetThumbnail with data set #3 (55, -28)
+108) Test\Preview\MovieTest::testGetThumbnail with data set #3 (94, -70)
 No Movie provider present
 
 /server/tests/lib/Preview/MovieTest.php:48
 
-109) Test\Preview\OfficeTest::testGetThumbnail with data set #0 (-66, -65)
+109) Test\Preview\OfficeTest::testGetThumbnail with data set #0 (-64, -94)
 No Office provider present
 
 /server/tests/lib/Preview/OfficeTest.php:45
 
-110) Test\Preview\OfficeTest::testGetThumbnail with data set #1 (67, 5)
+110) Test\Preview\OfficeTest::testGetThumbnail with data set #1 (93, 99)
 No Office provider present
 
 /server/tests/lib/Preview/OfficeTest.php:45
 
-111) Test\Preview\OfficeTest::testGetThumbnail with data set #2 (-31, 17)
+111) Test\Preview\OfficeTest::testGetThumbnail with data set #2 (-20, 55)
 No Office provider present
 
 /server/tests/lib/Preview/OfficeTest.php:45
 
-112) Test\Preview\OfficeTest::testGetThumbnail with data set #3 (89, -89)
+112) Test\Preview\OfficeTest::testGetThumbnail with data set #3 (30, -40)
 No Office provider present
 
 /server/tests/lib/Preview/OfficeTest.php:45
@@ -4019,5 +4019,5 @@ Unreliable test
 /server/apps/files_versions/tests/VersioningTest.php:690
 
 ERRORS!
-Tests: 14503, Assertions: 37402, Errors: 12, Failures: 15, Warnings: 484, Skipped: 121, Risky: 1.
+Tests: 14503, Assertions: 37403, Errors: 12, Failures: 15, Warnings: 484, Skipped: 121, Risky: 1.
 The command '/bin/sh -c ./autotest.sh sqlite' returned a non-zero code: 2
