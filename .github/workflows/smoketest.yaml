@@ -56,7 +56,7 @@ jobs:
 
     - name: Create index.html
       run: |
-        echo "<html><body>" > index.html
+        echo "<!DOCTYPE html><html><body>" > index.html
         echo "<h1>$(date)</h1><ul>" >> index.html
         for i in $(ls dist)
         do
