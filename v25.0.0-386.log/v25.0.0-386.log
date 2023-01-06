@@ -1,0 +1,1 @@
+docker build --platform=linux/386 --build-arg NEXTCLOUD_VERSION=v25.0.0 .
