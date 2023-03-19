@@ -9,11 +9,10 @@ jobs:
     strategy:
       matrix:
         version:
+          - stable24
           - stable25
-          - v25.0.2
-          - v25.0.0
-          - v24.0.8
-          - v24.0.6
+          - stable26
+          - master
         arch:
           - "386"
           - amd64
