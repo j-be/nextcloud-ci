@@ -6,11 +6,11 @@ RUN apt-get update && \
       libmagickcore-6.q16-6-extra \
       php \
       php-imagick \
-      php7.4-zip \
-      php7.4-gd \
-      php7.4-curl \
-      php7.4-sqlite3 \
-      php7.4-intl \
+      php-zip \
+      php-gd \
+      php-curl \
+      php-sqlite3 \
+      php-intl \
       phpunit
 
 ARG NEXTCLOUD_VERSION=v25.0.0
